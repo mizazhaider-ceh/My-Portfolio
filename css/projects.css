@@ -128,9 +128,9 @@
   }
   /* Image inside the Card */
   .custom-image {
-    width: 60px; /* Adjust size */
-    height: 60px;
-    border-radius: 50%; /* Makes it round */
+    width: 70px; /* Adjust size */
+    height: 70px;
+    border-radius: 20%; /* Makes it round */
     object-fit: cover; /* Ensures proper scaling */
     display: block;
     margin: 0 auto; /* Centers inside the card */
@@ -147,7 +147,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    gap: 10px; /* More spacing */
+    gap: 1px; /* More spacing */
     border-radius: 30px;
     cursor: pointer;
     color: rgb(60, 255, 0);
@@ -270,3 +270,14 @@
     transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
   }
   
+
+
+
+
+
+
+
+
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
