@@ -1,0 +1,65 @@
+/* ========== FOOTER BASE STYLING ========== */
+.footer-mobile {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========== STYLISH BIG TEXT WITH NEON GLOW ========== */
+.footer-text {
+    font-size: 3.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 5px;
+    position: relative;
+    animation: floatText 6s ease-in-out infinite, neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* ========== SUBTEXT STYLE ========== */
+.footer-subtext {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: black;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    animation: neonGlowSubtext 2s ease-in-out infinite alternate, floatText 5s ease-in-out infinite;
+}
+
+/* ========== FLOATING TEXT ANIMATION ========== */
+@keyframes floatText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+/* ========== CONTINUOUS NEON GLOW ========== */
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 8px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff; }
+    100% { text-shadow: 0 0 12px #ff33ff, 0 0 25px #ff33ff, 0 0 50px #ff33ff; }
+}
+
+/* ========== DIFFERENT NEON GLOW FOR SUBTEXT ========== */
+@keyframes neonGlowSubtext {
+    0% { text-shadow: 0 0 8px #00ff2f, 0 0 20px #00ff2f, 0 0 40px #00ff2f; }
+    100% { text-shadow: 0 0 12px #00ff11, 0 0 25px #00ff11, 0 0 50px #00ff11; }
+}
+
+/* ========== RESPONSIVE DESIGN FOR MOBILE ========== */
+@media (max-width: 768px) {
+    .footer-text {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+    .footer-subtext {
+        font-size: 2.2rem;
+    }
+}
