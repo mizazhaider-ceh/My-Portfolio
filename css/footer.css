@@ -1,9 +1,9 @@
-u/* ========== FOOTER BASE STYLING ========== */
+/* ========== FOOTER BASE STYLING ========== */
 .footer-mobile {
     width: 100%;
     position: relative;
     bottom: 0;
-    left: 0;
+    left: 5px;
     z-index: 1000;
     text-align: center;
     padding: 40px 0;
@@ -22,6 +22,11 @@ u/* ========== FOOTER BASE STYLING ========== */
     letter-spacing: 5px;
     position: relative;
     animation: floatText 6s ease-in-out infinite, neonGlow 1.5s ease-in-out infinite alternate;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ========== SUBTEXT STYLE ========== */
@@ -32,6 +37,11 @@ u/* ========== FOOTER BASE STYLING ========== */
     letter-spacing: 3px;
     margin-top: 10px;
     animation: neonGlowSubtext 2s ease-in-out infinite alternate, floatText 5s ease-in-out infinite;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ========== FLOATING TEXT ANIMATION ========== */
@@ -181,12 +191,12 @@ u/* ========== FOOTER BASE STYLING ========== */
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 190px;
+        width: 240px;
         max-width: 380px;
         background: linear-gradient(135deg, #fce4ec, #f8bbd0);
         padding: 15px;
         box-shadow: none;
-        margin-left: -78px;
+        margin-left: -98px;
         animation: fadeInUp 1s ease-out;
     }
 
