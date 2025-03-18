@@ -76,7 +76,7 @@ Here are some snapshots of my portfolio:
 
 ### 📍 **Projects Showcase**
 
-**Screenshot**: ![Projects](img/Projects.jpeg)
+**Screenshot**: ![Projects](img/projects.jpeg)
 
 ### 📍 **Where I Learned the Most Practically**
 
