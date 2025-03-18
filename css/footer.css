@@ -1,4 +1,4 @@
-/* ========== FOOTER BASE STYLING ========== */
+u/* ========== FOOTER BASE STYLING ========== */
 .footer-mobile {
     width: 100%;
     position: relative;
@@ -176,7 +176,7 @@
 
 
 /* Mobile View: Icon & Text Center */
-@media (max-width: 568px) {
+@media (max-width: 768px) {
     .education-item {
         flex-direction: column;
         align-items: center;
