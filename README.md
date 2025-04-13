@@ -1,8 +1,6 @@
-
-
 <center>  
 <img src="img/portfolio.png" alt="Cheers! I did it!" width="150px">  
-</center>  
+</center>
 
 # **My-Portfolio – A Unique, Professional, and Fully Customized Portfolio Website**
 
@@ -14,12 +12,13 @@ Every section has been  **refined, structured, and uniquely styled** , making th
 
 🚀 **This is more than a portfolio; it’s a testament to my journey, challenges, and resilience.**
 
+# 🌐 **Portfolio:** [Portfolio](https://mizazhaider-ceh.github.io/My-Portfolio/)
+
 ## **📌 Project Overview**
 
 <center>  
 <img src="img/view.png" alt="Cheers! I did it!" width="150px">  
-</center> 
-
+</center>
 
 ### 🔹 **Purpose of This Portfolio**
 
@@ -42,7 +41,7 @@ This portfolio is designed to:
 
 <center>  
 <img src="img/features.png" alt="Cheers! I did it!" width="150px">  
-</center> 
+</center>
 
 ✔ **Fully Responsive Design** – Seamlessly adapts to all screen sizes.
 
@@ -88,7 +87,7 @@ Here are some snapshots of my portfolio:
 
 <center>  
 <img src="img/journey.png" alt="Cheers! I did it!" width="150px">  
-</center> 
+</center>
 
 This project was  **more than just coding** —it was an experience that taught me  **patience, resilience, and problem-solving skills** .
 
@@ -108,8 +107,7 @@ During these  **three intense days** , I:
 
 <center>  
 <img src="img/lost.png" alt="Cheers! I did it!" width="150px">  
-</center>  
-
+</center>
 
 **📅 Date:** March 18, 2025
 
@@ -117,10 +115,11 @@ During these  **three intense days** , I:
 
 Everything was going smoothly—until **I made a critical mistake that almost cost me two days of hard work.**
 
-### **What Happened?** 
+### **What Happened?**
+
 <center>  
 <img src="img/happen.png" alt="Cheers! I did it!" width="150px">  
-</center>  
+</center>
 
 1. My **index.html and CSS files** were open in **VS Code** while I was finalizing the project.
 2. I  **moved them to a new folder** , but some files didn’t transfer properly.
@@ -129,12 +128,11 @@ Everything was going smoothly—until **I made a critical mistake that almost co
 5. Without thinking,  **I clicked "Replace"** —and that was my **biggest mistake.**
 6. **All my modifications were lost** —two full days of hard work **gone in seconds!**
 
-
 ## ✨ **A Miracle**
 
 <center>  
 <img src="img/star.png" alt="Cheers! I did it!" width="150px">  
-</center> 
+</center>
 
 **⏰ Time:** 2:16 PM
 
@@ -142,8 +140,7 @@ Everything was going smoothly—until **I made a critical mistake that almost co
 
 <center>  
 <img src="img/recovery.png" alt="Cheers! I did it!" width="130px">  
-</center> 
-
+</center>
 
 🔥 At first,  **I panicked** —but I quickly **regained control** and looked for a solution:
 
@@ -167,7 +164,7 @@ Everything was going smoothly—until **I made a critical mistake that almost co
 
 <center>  
 <img src="img/finally.png" alt="Cheers! I did it!" width="150px">  
-</center> 
+</center>
 
 This journey of building my portfolio was much more than just a technical project—it was a true  **test of patience, problem-solving, and faith** .
 
@@ -185,7 +182,6 @@ This journey of building my portfolio was much more than just a technical projec
 
 💡 **Lesson for Everyone:** Mistakes and setbacks are part of life. But those who **trust Allah, believe in themselves, and keep trying** will always find success. **Alhamdulillah, I didn’t give up—and neither should you!** 🚀
 
-
 ### 🎉 **Finally, I Did It!** 🎉
 
 After all the challenges, learning, and late-night coding sessions—**it's done!** 🚀
@@ -198,10 +194,9 @@ I started this journey with a goal, faced unexpected hurdles, but never gave up.
 
 <center>  
 <img src="img/cheers.png" alt="Cheers! I did it!" width="250px">  
-</center>  
+</center>
 
 ### 🚀  Onward to new challenges, bigger projects, and endless learning!
-
 
 ## **📩 Contact & Connect**
 
