@@ -281,3 +281,31 @@
 
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* button css */
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Set your desired height */
+}
+
+.github-btn {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.github-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
