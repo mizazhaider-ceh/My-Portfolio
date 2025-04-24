@@ -594,6 +594,77 @@ pre code {
   overflow-y: scroll;
 }
 
+/*--------------------------------------------------------------
+# Button css
+--------------------------------------------------------------*/
+
+.button {
+  all: unset;
+  display: flex;
+  justify-content: center;   /* ✅ Center horizontally */
+  align-items: center;       /* ✅ Center vertically */
+  position: relative;
+  padding: 0.6em 2em;
+  border: rgb(9, 255, 181) solid 0.15em;
+  border-radius: 0.25em;
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  margin: 0 auto; /* center the button */
+  text-align: center; /* optional */
+}
+
+.button p {
+  z-index: 1;
+}
+
+.button:hover {
+  color: #212121;
+}
+
+.button:active {
+  border-color: teal;
+}
+
+.button::after, .button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: mediumspringgreen;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
+}
+
+
+
 .container,
 .container-fluid,
 .container-sm,
