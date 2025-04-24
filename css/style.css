@@ -612,6 +612,7 @@ pre code {
   font-weight: 600;
   cursor: pointer;
   overflow: hidden;
+  transition: border 300ms, color 300ms;
   user-select: none;
   margin: 0 auto; /* center the button */
   text-align: center; /* optional */
