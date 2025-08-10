@@ -1,0 +1,317 @@
+/* ======================================================= */
+/*  V7.1: The "Quantum Frame" Grid (No Background)         */
+/*  Expert-Level CSS, Refined for a White Background       */
+/* ======================================================= */
+
+/*
+ *  SECTION: GRID LAYOUT CONTAINER
+ *  --------------------------------------
+ *  This now simply arranges the cells in a responsive grid
+ *  and establishes the 3D space for the animations.
+*/
+
+
+
+/*
+ *  FINAL LAYOUT FIX: Centering the LinkedIn Text
+ *  --------------------------------------------------
+ *  This targets the container for the final text block
+ *  and makes it span the full width of the grid.
+*/
+#certs .centered-container {
+    /* This is the magic property. It tells the item to start
+       at the first grid line (1) and span to the very last one (-1). */
+    grid-column: 1 / -1;
+
+    /* Add standard centering and spacing for a polished look */
+    text-align: center;
+    margin-top: 2rem; /* Adds some space above the text */
+}
+
+/* Style the link for better visibility and consistency */
+#certs .centered-container a {
+    color: #0015ff; /* Uses your theme's primary blue */
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+#certs .centered-container a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #059755;
+    bottom: -4px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+#certs .centered-container a:hover {
+    color: #6a00ff; /* A slightly darker blue on hover */
+}
+
+#certs .centered-container a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+/* ================================================== */
+
+
+
+
+
+
+
+
+
+
+#certs .kinetic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem; /* Increased gap for better spacing on a white bg */
+    perspective: 2500px; /* Essential for 3D effects */
+    padding: 1rem 0; /* Add some vertical spacing */
+}
+
+
+/*
+ *  SECTION: GRID CELL - DEFAULT STATE
+ *  ----------------------------------
+ *  Styling for each certificate cell. Each one is a dark,
+ *  self-contained unit floating on the white page.
+*/
+
+#certs .grid-cell {
+    position: relative;
+    aspect-ratio: 16 / 12;
+    background: #0d1117; /* The dark background for each cell */
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    
+    /* Key for 3D effects on child elements */
+    transform-style: preserve-3d; 
+    
+    /* Performance hint for browsers */
+    will-change: transform, filter, box-shadow; 
+    
+    /* Professional-grade transition easing */
+    transition: 
+        transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* The powerful focus effect on non-hovered items */
+#certs .kinetic-grid:hover > .grid-cell:not(:hover) {
+    filter: brightness(0.5) saturate(0) blur(4px);
+    transform: scale(0.95);
+}
+
+/* The certificate image itself */
+#certs .cell__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Perfectly clear by default */
+    filter: none; 
+    transform: scale(1.0);
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* The sleek title bar visible by default */
+#certs .cell__title-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 22px;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, transparent 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    z-index: 10;
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+/*
+ *  SECTION: HOVER-ACTIVATED OVERLAY & CONTENT
+ *  ------------------------------------------
+ *  The holographic panel that appears on hover.
+*/
+
+#certs .cell__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 20; /* High z-index to be on top */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    
+    /* The "glassmorphism" / holographic effect */
+    background: rgba(13, 17, 23, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    /* Initial hidden state for animation */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    
+    transition: opacity 0.5s 0.2s ease, transform 0.5s 0.2s ease, visibility 0.5s 0.2s ease;
+}
+
+/* Active Scanline effect on the overlay */
+@keyframes scan {
+    from { background-position: 0% 0%; }
+    to { background-position: 0% 100%; }
+}
+
+#certs .cell__overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0, 191, 255, 0.1) 48%,
+        rgba(0, 191, 255, 0.3) 50%,
+        rgba(0, 191, 255, 0.1) 52%,
+        transparent
+    );
+    background-size: 100% 50px;
+    opacity: 0;
+    animation: scan 2s linear infinite;
+    transition: opacity 0.4s 0.2s ease;
+}
+
+#certs .overlay__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+    transform: scale(1.1);
+    transition: transform 0.5s 0.3s ease;
+}
+
+#certs .overlay__issuer {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-top: 5px;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+#certs .overlay__button {
+    color: #00BFFF;
+    background: transparent;
+    border: 2px solid #00BFFF;
+    border-radius: 50px;
+    padding: 12px 35px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: scale(0.9);
+    transition: all 0.4s 0.4s ease;
+}
+
+#certs .overlay__button:hover {
+    background: #00BFFF;
+    color: #000;
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.7);
+}
+
+
+/*
+ *  SECTION: THE "QUANTUM ACTIVATION" HOVER STATE
+ *  ---------------------------------------------
+ *  This is the core of the animation, bringing everything together.
+*/
+
+#certs .grid-cell:hover {
+    transform: translateY(-20px) rotateX(7deg) rotateY(-5deg) scale(1.1);
+    box-shadow: 0 40px 60px rgba(0,0,0,0.3), 0 0 40px rgba(0, 191, 255, 0.6);
+    z-index: 100;
+}
+
+/* Animate the inner components on hover */
+#certs .grid-cell:hover .cell__img {
+    transform: scale(1.15);
+}
+
+#certs .grid-cell:hover .cell__title-bar {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#certs .grid-cell:hover .cell__overlay {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#certs .grid-cell:hover .cell__overlay::after {
+    opacity: 1;
+}
+
+#certs .grid-cell:hover .overlay__title {
+    transform: scale(1);
+}
+
+#certs .grid-cell:hover .overlay__button {
+    transform: scale(1);
+}
+
+/* The Sweeping Frame Animation using Clip-Path */
+#certs .grid-cell::before, 
+#certs .grid-cell::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 15;
+    pointer-events: none; /* Allows clicks to go through */
+    border: 2px solid #00BFFF;
+    border-radius: 12px;
+    box-shadow: inset 0 0 15px rgba(0, 191, 255, 0.5);
+    
+    /* Set initial clip-path for animation */
+    transition: clip-path 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* ::before handles horizontal sweep */
+#certs .grid-cell::before {
+    clip-path: inset(0 50% 0 50%);
+}
+/* ::after handles vertical sweep */
+#certs .grid-cell::after {
+    clip-path: inset(50% 0 50% 0);
+    transition-delay: 0.1s; /* Stagger the animation */
+}
+
+/* On hover, expand the clip-path to reveal the full border */
+#certs .grid-cell:hover::before,
+#certs .grid-cell:hover::after {
+    clip-path: inset(0 0 0 0);
+}
+
+
+
+
+
