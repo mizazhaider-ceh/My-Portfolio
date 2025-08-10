@@ -1,0 +1,170 @@
+/* ======================================================= */
+/*  "The Crystalline Frame" CSS V2                         */
+/*  This is the definitive design you asked for.           */
+/* ======================================================= */
+
+/* --- SECTION & GRID SETUP --- */
+.recognitions-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #00BFFF;
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
+    margin-bottom: 3.5rem;
+}
+
+.recognitions-grid {
+    display: grid;
+    /* This creates two columns of a smaller, fixed size, centered in the available space */
+    grid-template-columns: repeat(2, minmax(300px, 380px));
+    justify-content: center;
+    gap: 3rem;
+}
+
+.prism-card-container {
+    perspective: 2000px;
+}
+
+/* --- THE MAIN CARD STYLING --- */
+.prism-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 3 / 4;
+    text-decoration: none;
+    background: #0d1117; /* The dark background that will form the frame */
+    border-radius: 24px; /* Softer, more curved borders */
+    padding: 1rem; /* This padding creates the visible border around the image */
+    transform-style: preserve-3d;
+    transition: box-shadow 0.4s ease, transform 0.1s linear;
+}
+
+.prism-card:hover {
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 40px rgba(0, 191, 255, 0.6);
+}
+
+/* --- THE INSET IMAGE --- */
+.card-bg-img {
+    position: relative; /* No longer absolute */
+    width: 100%;
+    height: 100%;
+  
+    border-radius: 16px; /* A slightly smaller radius than the parent card */
+    transition: filter 0.6s ease;
+}
+.prism-card:hover .card-bg-img {
+    filter: blur(8px) brightness(0.6);
+}
+
+
+/* --- THE ANIMATED CRYSTALLINE FRAME --- */
+.prism-card::before, .prism-card::after {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    background: #00BFFF;
+    box-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF;
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.7, 0, 0.2, 1), opacity 0.4s ease;
+}
+/* Vertical lines of the frame */
+.prism-card::before {
+    top: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    width: 3px;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+/* Horizontal lines of the frame */
+.prism-card::after {
+    left: 1rem;
+    right: 1rem;
+    top: 1rem;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+/* The sequenced animation on hover */
+.prism-card:hover::before, .prism-card:hover::after {
+    transform: scale(1);
+    opacity: 1;
+}
+.prism-card:hover::before { transition-delay: 0.15s; } /* Vertical lines draw second */
+
+
+/* --- THE GLASS OVERLAY & CONTENT --- */
+.prism-overlay {
+    position: absolute;
+    inset: 1rem; /* Aligns perfectly with the inner image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 16px;
+
+    /* The glass effect, now without its own border */
+    background: rgba(13, 17, 23, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    opacity: 0;
+    transition: opacity 0.5s 0.2s ease;
+}
+
+.prism-card:hover .prism-overlay {
+    opacity: 1;
+}
+
+.prism-content {
+    text-align: center;
+}
+
+/* Staggered text animation */
+.prism-title, .prism-issuer, .prism-button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.prism-card:hover .prism-title { opacity: 1; transform: translateY(0); transition-delay: 0.4s; }
+.prism-card:hover .prism-issuer { opacity: 1; transform: translateY(0); transition-delay: 0.5s; }
+.prism-card:hover .prism-button { opacity: 1; transform: translateY(0); transition-delay: 0.6s; }
+
+.prism-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255,255,255,0.5), 0 0 25px rgba(0, 191, 255, 0.7);
+}
+.prism-issuer {
+    font-size: 1rem;
+    font-style: italic;
+    color: #ddd;
+    margin: 0.5rem 0 2rem 0;
+}
+.prism-button {
+    font-weight: 600;
+    color: #0d1117;
+    background: #fff;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+
+/* --- RESPONSIVE & JS --- */
+@media (max-width: 768px) {
+    .recognitions-grid {
+        grid-template-columns: 1fr;
+    }
+}

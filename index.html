@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/certificates.css">
+    <link rel="stylesheet" href="css/upper.css">
 
 </head>
 
@@ -359,6 +360,88 @@
         </div>
     </div>
     <!-- About End -->
+
+
+
+
+
+
+<!-- ======================================================= -->
+<!-- START: The Digital Archive Showcase                   -->
+<!-- ======================================================= -->
+
+<div class="recognitions-section">
+    <h2 class="section-heading">Featured Recognitions</h2>
+    <div class="recognitions-grid">
+<!-- ======================================================= -->
+<!-- START: The Kinetic Showcase                           -->
+<!-- ======================================================= -->
+
+      
+        <!-- Card 1: Ek Pakistan -->
+        <div class="prism-card-container" data-aos="fade-up">
+            <a href="https://www.facebook.com/share/p/16uvDyNeAC/" target="_blank" class="prism-card">
+                <img src="img/star.jpg" alt="Ek Pakistan Recognition" class="card-bg-img">
+                <div class="prism-overlay">
+                    <div class="prism-content">
+                        <h3 class="prism-title">Rising Star in Cybersecurity</h3>
+                        <p class="prism-issuer">- Ek Pakistan -</p>
+                        <span class="prism-button">View Post</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Card 2: PakSphere -->
+        <div class="prism-card-container" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://m.facebook.com/story.php?story_fbid=pfbid0mJn9g6ojLCa6wgja4zsYSpWCeUnhsnVFGPDNp3Q5SEqiXSt2ZqMz1YxJ1RTD8mrdl&id=100080182662828&mibextid=Nif5oz" target="_blank" class="prism-card">
+                <img src="img/next-gen.jpeg" alt="PakSphere Recognition" class="card-bg-img">
+                <div class="prism-overlay">
+                    <div class="prism-content">
+                        <h3 class="prism-title">The Next Gen Technologist</h3>
+                        <p class="prism-issuer">- PakSphere -</p>
+                        <span class="prism-button">View Post</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+
+
+            <script>
+                document.querySelectorAll('.prism-card-container').forEach(container => {
+                    const card = container.querySelector('.prism-card');
+                    container.addEventListener('mousemove', (e) => {
+                        const rect = container.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        const rotateX = -y / 20;
+                        const rotateY = x / 20;
+                        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    });
+                    container.addEventListener('mouseleave', () => {
+                        card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+                    });
+                });
+            </script>
+
+
+                    </div>
+                </div>
+
+
+
+    </div>
+</div>
+<!-- ======================================================= -->
+<!-- END: Featured Recognitions Section                    -->
+<!-- ======================================================= -->
+
+
+
+
+
+
 
 
 <!-- Qualification Start -->
