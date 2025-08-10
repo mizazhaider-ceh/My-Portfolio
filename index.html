@@ -98,7 +98,10 @@
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
                 <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
             </div>
+
+            
             <div class="row align-items-center">
+                
                 <div class="col-lg-5 pb-4 pb-lg-0">
                     <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/about.jpg" alt="">
                 </div>
@@ -109,7 +112,7 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                font-size: 28px;
+                                font-size: 26px;
                                 font-weight: bold;
                                 flex-wrap: wrap;
                                 text-align: center; /* Ensure text aligns perfectly */
@@ -127,7 +130,7 @@
                             }
 
                             .text {
-                                background: linear-gradient(to right, #d10d0d, #36a50d);
+                                background: linear-gradient(to right, #4a1d1d, #1b5406);
                                 -webkit-background-clip: text;
                                 color: transparent;
                                 white-space: nowrap;
@@ -186,123 +189,166 @@
                     </div>
                     
                     
-                <style>
-                    /* Main Container */
-                    .profile-container {
-                        background: #f9f9f9;
-                        padding: 20px;
-                        border-radius: 12px;
-                        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-                        max-width: 800px;
-                        margin: auto;
-                        font-family: 'Poppins', sans-serif;
-                        display: grid;
-                        grid-template-columns: repeat(2, 1fr);
-                        gap: 15px;
-                    }
-                
-                    /* Profile Item */
-                    .profile-item {
-                        display: flex;
-                        align-items: center;
-                        gap: 12px;
-                        padding: 12px;
-                        font-size: 16px;
-                        transition: all 0.3s ease;
-                        background: #ffffff;
-                        border-radius: 10px;
-                        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-                    }
-                
-                    .profile-item:hover {
-                        transform: scale(1.02);
-                    }
-                
-                    /* Bold Labels */
-                    .profile-label {
-                        font-weight: bold;
-                        font-size: 17px;
-                        color: #333;
-                    }
-                
-                    /* Gradient Text */
-                    .profile-value {
-                        font-weight: bold;
-                        font-size: 14px;
-                        background: linear-gradient(to right, #ff1e56, #007bff);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                
-                    /* Gradient Icons */
-                    .profile-icon {
-                        font-size: 18px;
-                        width: 40px;
-                        height: 40px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-radius: 50%;
-                        background: linear-gradient(to right, #ff1e56, #007bff);
-                        color: white;
-                        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
-                    }
-                
-                    /* Mobile Optimization */
-                    @media (max-width: 500px) {
-                        .profile-container {
-                            display: flex;
-                            flex-direction: column;
-                        }
-                        .profile-item h5 {
-                            display: flex;
-                            flex-direction: column; /* Forces label & value to stack */
-                        }
 
-                        .profile-value {
-                            display: block; /* Moves the email to a new line */
-                            word-break: break-word; /* Ensures long words break */
-                            margin-top: 5px; /* Adds spacing */
-                        }
+                                
+
+                    <!-- COLUMN 2: YOUR PROFILE INFORMATION -->
+                    <!-- Place your existing .profile-container div here -->
+                    <div class="profile-container">
+                        <div class="profile-item">
+                            <h5><span class="profile-label">Name:</span> <span class="profile-value">Muhammad Izaz Haider</span></h5>
+                        </div>
+                        <div class="profile-item">
+                            <h5><span class="profile-label">Degree:</span> <span class="profile-value">Upcoming: BSc Cybersecurity @ Howest University</span></h5>
+                        </div>
+                        <div class="profile-item">
+                            <h5><span class="profile-label">Experience:</span> <span class="profile-value">4+ Years of Practical Experience</span></h5>
+                        </div>
+                        <div class="profile-item">
+                            <h5><span class="profile-label">Phone:</span> <span class="profile-value">+92 306-6150249</span></h5>
+                        </div>
+                        <div class="profile-item">
+                            <h5><span class="profile-label">Email:</span> <span class="profile-value">mizazhaiderceh@gmail.com</span></h5>
+                        </div>
+                        <div class="profile-item">
+                            <h5><span class="profile-label">Address:</span> <span class="profile-value">Gujrat, Punjab, Pakistan</span></h5>
+                        </div>
+                        <div class="profile-item">
+                            <h5><span class="profile-label">Mission: </span> <span class="profile-value">Becoming a Cybersecurity Expert</span></h5>
+                        </div>
+                        <div class="profile-item">
+                            <h5><span class="profile-label">Focus:</span> <span class="profile-value">Offensive Security & Artificial Intelligence</span></h5>
+                        </div>
+                    </div>
+
+                                    <style>
+                /* ======================================================= */
+                /*
+                *  --- COLUMN 2: THE PROFILE INFORMATION ---
+                *  >>> THIS IS THE UPDATED SECTION WITH THE GUARANTEED FIX <<<
+                */
+                .profile-container {
+                    display: grid;
+                    /* 1. GUARANTEED EQUAL WIDTH: Two equal fraction units */
+                    grid-template-columns: 1fr 1fr; 
+                    
+                    /* 2. GUARANTEED EQUAL HEIGHT: This crucial property tells the grid
+                    to make all rows the same height, automatically adjusting to fit
+                    the tallest content in any given row. */
+                    grid-auto-rows: 1fr; 
+
+                    gap: 0.3rem;
+                    width: 100%;
+                }
+
+                /* Individual Info Card */
+                .profile-item {
+                    background: #f8f9fa;
+                    border-radius: 12px;
+                    padding: 1rem 1.5rem;
+                    border: 1px solid #e9ecef;
+                    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+                    
+                    /* We use flexbox to perfectly center the content (icon + text block) */
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+                }
+
+                .profile-item:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+                    border-color: #dee2e6;
+                }
+
+                /* Text Styling within the card */
+                .profile-item h5 {
+                    margin: 0;
+                    line-height: 1.5;
+                    flex-grow: 1;
+
+                    /* This creates a new flex container for the label/value */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; /* Vertically centers the text stack */
+                }
+
+                .profile-label {
+                    display: block;
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    color: #6c757d;
+                    margin-bottom: 0.2rem;
+                    text-transform: uppercase;
+                    text-align: left; /* Aligns the label text to the left */
+                }
+
+                .profile-value {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: #212529;
+                    text-align: left; /* Aligns the value text to the left */
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    word-break: normal;
+                }
+
+                /* The Vibrant Gradient Icons */
+                .profile-item::before {
+                    font-family: 'Font Awesome 5 Free';
+                    font-weight: 900;
+                    content: ''; 
+                    flex-shrink: 0;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    width: 45px;
+                    height: 45px;
+                    font-size: 1.1rem;
+                    color: white;
+                    border-radius: 50%;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                }
+
+                /* Assign unique icons and gradients (with the typo fixed) */
+                .profile-item:nth-child(1)::before { content: '\f007'; background: linear-gradient(45deg, #007bff, #00d4ff); } /* User */
+                .profile-item:nth-child(2)::before { content: '\f19d'; background: linear-gradient(45deg, #8a2be2, #c966ff); } /* Graduation Cap */
+                .profile-item:nth-child(3)::before { content: '\f0b1'; background: linear-gradient(45deg, #28a745, #20c997); } /* Briefcase */
+                .profile-item:nth-child(4)::before { content: '\f095'; background: linear-gradient(45deg, #dc3545, #fd7e14); } /* Phone */
+                .profile-item:nth-child(5)::before { content: '\f0e0'; background: linear-gradient(45deg, #ffc107, #ffdb5d); } /* Envelope */
+                .profile-item:nth-child(6)::before { content: '\f3c5'; background: linear-gradient(45deg, #17a2b8, #66d9e8); } /* Map Marker */
+                .profile-item:nth-child(7)::before { content: '\f11e'; background: linear-gradient(45deg, #6f42c1, #b197fc); } /* Bullseye */
+                .profile-item:nth-child(8)::before { content: '\f121'; background: linear-gradient(45deg, #343a40, #6c757d); } /* Code */
+
+
+                /*
+                *  RESPONSIVE DESIGN
+                */
+                @media (max-width: 992px) {
+                    .about-section-container {
+                        grid-template-columns: 1fr;
+                        gap: 2rem;
+                        padding: 1rem;
                     }
+                    
+                    .about-picture-wrapper img {
+                        max-width: 250px;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .profile-container {
+                        /* On mobile, stack the info cards into one column */
+                        grid-template-columns: 1fr;
+                    }
+                }
 
                 </style>
-                
-                <div class="profile-container">
-                    <div class="profile-item">
-                       
-                        <h5><span class="profile-label">Name:</span> <span class="profile-value">Muhammad Izaz Haider</span></h5>
-                    </div>
 
-                    <div class="profile-item">
-                        
-                        <h5><span class="profile-label">Degree:</span> <span class="profile-value">Upcoming: BSc Cybersecurity @ Howest University</span></h5>
-                    </div>
-                    <div class="profile-item">
-                        
-                        <h5><span class="profile-label">Experience:</span> <span class="profile-value">4+ Years of Practical Experience</span></h5>
-                    </div>
-                    <div class="profile-item">
-                        
-                        <h5><span class="profile-label">Phone:</span> <span class="profile-value">  +92 306-6150249</span></h5>
-                    </div>
-                    <div class="profile-item">
-                       
-                        <h5><span class="profile-label">Email:</span> <small></small><span class="profile-value">mizazhaiderceh@gmail.com</span></h5>
-                    </div>
-                    <div class="profile-item">
-                    
-                        <h5><span class="profile-label">Address:</span> <span class="profile-value">Gujrat, Punjab, Pakistan</span></h5>
-                    </div>
-                    <div class="profile-item">
-                        
-                        <h5><span class="profile-label">Mission: </span> <span class="profile-value">Becoming a Cybersecurity Expert</span></h5>
-                    </div>
-                    <div class="profile-item">
-                       
-                        <h5><span class="profile-label">Focus:</span> <span class="profile-value">Offensive Security & Artificial Intelligence</span></h5>
-
-                    </div>
                 </div>
                 
                 <!-- Font Awesome Icons (Required for icons to work) -->
@@ -472,10 +518,12 @@
         <li class="tech-stack-box" data-aos="fade-up"><img src="img/offense.jpeg" alt="Offensive Security" class="tech-stack-logo"><span class="tooltip">Offensive Security</span></li>
         <li class="tech-stack-box" data-aos="fade-up"><img src="img/web.png" alt="Web Application Pentesting" class="tech-stack-logo"><span class="tooltip">Web Application Pentesting</span></li>
         <li class="tech-stack-box" data-aos="fade-up"><img src="img/network.png" alt="Network Pentesting" class="tech-stack-logo"><span class="tooltip">Network Pentesting</span></li>
-        
+    
+    
         <!-- Development & Automation -->
         <li class="tech-stack-box" data-aos="fade-up"><img src="img/python.png" alt="Python" class="tech-stack-logo"><span class="tooltip">Python (Advanced)</span></li>
         <li class="tech-stack-box" data-aos="fade-up"><img src="img/bash.png" alt="Bash/Shell" class="tech-stack-logo"><span class="tooltip">Bash/Shell Scripting</span></li>
+        
         <li class="tech-stack-box" data-aos="fade-up"><img src="img/programming.png" alt="Tool Development" class="tech-stack-logo"><span class="tooltip">Security Tool Development</span></li>
         <li class="tech-stack-box" data-aos="fade-up"><img src="img/automation.png" alt="Automation" class="tech-stack-logo"><span class="tooltip">Security Automation</span></li>
 
