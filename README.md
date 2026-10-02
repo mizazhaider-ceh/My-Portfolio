@@ -81,6 +81,10 @@ Here are some snapshots of my portfolio:
 
 **Screenshot**: ![Courses](img/courses.jpeg)
 
+### 📍 **Hero (2026 render)**
+
+**Screenshot**: ![Hero](img/hero-2026.png)
+
 ### 📢 **Live Demo:**  [Portfolio](https://mizazhaider-ceh.github.io/My-Portfolio/)
 
 ## **📖 My Journey: Lessons, Struggles & Growth**
